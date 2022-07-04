@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Karla:wght@700&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Karla', sans-serif;
+}
+.app{
+  position: relative;
+  background-color: #F5F7FB;
+}
+
+.bottom-blob{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.top-blob{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.landing{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.landing h1{
+  font-weight: 700;
+  font-size: 2rem;
+  color: #293264;
+  margin: 0;
+  margin-bottom: .5rem;
+}
+
+.landing h3{
+  margin: 0;
+  margin-bottom: 1.75rem;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #293264;
+}
+
+.landing button{
+  background-color:#4D5B9E ;
+  color: #F5F7FB;
+  border: none;
+  border-radius: 15px;
+  padding: 1rem 1.75rem;
+  font-size: 1rem;
+  font-family: 'Inter';
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.landing button:active, .landing button:hover{
+  background-color: #4d5b9ee0;
+}
