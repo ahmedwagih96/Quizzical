@@ -2,14 +2,50 @@
 
 *{
   box-sizing: border-box;
+  padding:0;
+  margin:0;
 }
 
 body{
   font-family: 'Karla', sans-serif;
+
 }
+
+.container{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container{
+       width:750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container{
+       width: 970px
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container{
+       width: 1170px;
+  }
+}
+
+
 .app{
   position: relative;
   background-color: #F5F7FB;
+  height: 100vh;
 }
 
 .bottom-blob{
@@ -47,8 +83,7 @@ body{
   font-size: 1rem;
   color: #293264;
 }
-
-.landing button{
+.btn{
   background-color:#4D5B9E ;
   color: #F5F7FB;
   border: none;
@@ -59,8 +94,87 @@ body{
   font-weight: 500;
   cursor: pointer;
   transition: .3s;
+  width: fit-content;
+  margin: 0 auto;
 }
 
-.landing button:active, .landing button:hover{
+.btn:active, .landing button:hover{
   background-color: #4d5b9ee0;
 }
+
+.quiz{
+  z-index: 1000;
+  padding: 2.5rem 0rem;
+  min-width: 300px;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.question .question-heading{
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: .75rem;
+  color: #293264;
+}
+
+
+.question .answers{
+  display: flex;
+  gap: 0 .79rem;
+}
+
+
+.question .answer{
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: .64rem;
+  color: #293264;
+  border-radius: .5rem;
+  cursor: pointer;
+  min-width: 4rem;
+  padding: .25rem;
+  border: 1px solid #293264;
+  text-align: center;
+  transition: .3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.question .answer:hover{
+  background-color: #D6DBF5;
+  border-color: transparent;
+}
+.question hr{
+  border: 0.794239px solid #DBDEF0;
+  margin: 1rem 0;
+}
+
+.score-info{
+  display: flex;
+  align-items: center;
+  gap: 0 2rem;
+}
+.score{
+  font-weight: 700;
+  font-size: 0.81rem;
+  color: #293264;
+}
+@media (min-width: 768px) {
+  .question .question-heading{
+       font-size:2rem;
+  }
+  .question .answer{
+    font-size: 1rem
+  }
+  .question .btn{
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+  .score{
+    font-size: 1.5rem;
+  }
+}
+
